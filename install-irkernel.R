@@ -1,5 +1,6 @@
-install.packages(c('rzmq','repr','IRkernel','IRdisplay'),
-                 repos = c('http://irkernel.github.io/',
-                           'http://cran.us.r-project.org'))
+install.packages(c('repr', 'IRdisplay', 'crayon', 'pbdZMQ', 'devtools'),
+                 repos = c('http://cran.us.r-project.org'))
 
-IRkernel::installspec()
+devtools::install_github('IRkernel/IRkernel')
+
+IRkernel::installspec()  # to register the kernel in the current R installation
